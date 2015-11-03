@@ -6,3 +6,41 @@
 
 html {}
 body {}
+
+// main overwrites
+a { text-decoration: none; }
+
+// body wrapper
+.bodyWrapper {
+	text-align: center;
+}
+
+// page wrapper
+.pageWrapper {
+	width: 980px;
+	margin: 0 auto;
+	text-align: left;
+	border: 1px solid #eee;
+}
+
+// site navigation
+.siteNav {
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		display: inline-block;
+		padding: 0 .2em;
+	}
+}
+
+// page header
+
+
+// page footer
+.pageFooter {
+	text-align: center;
+	font-size: .8em;
+}
