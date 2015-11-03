@@ -5,25 +5,63 @@
 
 
 html {}
-body {}
+body {
+	background: #333;
+	color: #ccc;
+	font-family: 'Open Sans', sans-serif;
+}
+
+
 
 // main overwrites
-a { text-decoration: none; }
+// ------------------------
+
+a { 
+	text-decoration: none; 
+	color: #fff;
+}
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+
+// floats
+.fLt { float: left; }
+.fRt { float: right; }
+
+// clear for floated containers 
+.clearFloats { 
+	zoom: 1; 
+	&:before,
+	&:after {
+		content: ""; 
+		display: table; 
+	}
+	&:after { clear: both; }
+}
+// ------------------------
+
+
 
 // body wrapper
+// ------------------------
 .bodyWrapper {
 	text-align: center;
 }
+// ------------------------
+
+
 
 // page wrapper
+// ------------------------
 .pageWrapper {
 	width: 980px;
 	margin: 0 auto;
 	text-align: left;
-	border: 1px solid #eee;
 }
+// ------------------------
 
-// site navigation
+
+
+// site navigation (both header and footer)
+// ------------------------
 .siteNav {
 	ul {
 		list-style: none;
@@ -32,15 +70,165 @@ a { text-decoration: none; }
 	}
 	li {
 		display: inline-block;
-		padding: 0 .2em;
+		padding: 5px;
 	}
+
 }
+// ------------------------
+
+
 
 // page header
+// ------------------------
+.pageHeader {
+	min-height: 60px;
+	.siteNav { 
+		background: $yellowColor; 
+		li {
+			line-height: 1;
+			a { 
+				display: block;
+				padding: .5em;
+				margin: 0;
+				color: #000;
+				text-transform: uppercase;
+				border: 1px solid transparent;
+				&:hover { border-color: #000; }
+			}
+			&:last-child { float: right; }
+			&.active a { 
+				background: #000;
+				color: $yellowColor;
+			}
+		}
+	}
+}
+// header contact box
+.headerContacts {
+	float: right;
+	background: #000;
+	padding: 5px 20px;
+	margin: 5px 0;
+	text-align: center;
+	h3 { 
+		font-size: 1.4em;
+		margin: 0 0 .2em;
+	}
+}
+// header logo
+.headerLogo {
+	
+}
+// header right container
+.headeRightContainer { 
+	float: right; 
+}
+// header language selector
+.headerLang {
+	font-size: .8em;
+	text-align: right;
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	li { 
+		display: inline-block;
+		text-transform: uppercase;
+		&.active { display: none; }
+	}
+}
+// ------------------------
+
 
 
 // page footer
+// ------------------------
 .pageFooter {
+	margin: 20px 0 0;
 	text-align: center;
 	font-size: .8em;
 }
+.footerCopyright { 
+	padding: 5px 0 10px;
+	margin-top: 5px;
+	font-size: .7em;
+	color: #999;
+	border-top: 1px solid #999;
+}
+// ------------------------
+
+
+
+// menu burger button
+// ------------------------
+.pageHeader {
+	
+	$menuBurgerAnimationSpeed: 0.2s;
+	$menuBurgerLineHeight: 4px;
+	
+	.menuBurgerButton {
+		display: none;
+		font-size: 24px;
+		position: absolute;
+		top: -5px;
+		left: -5px;
+		z-index: 2;
+		width: 56px;
+		height: 56px;
+		cursor: pointer;
+		background: #f3f3f3; 
+	
+		span {
+			@include create-block(60%,$menuBurgerLineHeight);
+			top: 50%;
+			left: 20%;
+			margin-top: -#{$menuBurgerLineHeight / 2};
+			background-color: #900;
+			border-radius: 1em;
+			//
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			//
+			
+			&:after,
+			&:before {
+				@include create-block(100%,100%);
+				left: 0;
+				background: #900;
+				border-radius: 1em;
+				-webkit-transition: -webkit-transform $menuBurgerAnimationSpeed; 
+				-moz-transition: -moz-transform $menuBurgerAnimationSpeed;
+				-o-transition: -o-transform $menuBurgerAnimationSpeed;
+				transition: transform $menuBurgerAnimationSpeed;
+			}
+			
+			&:before { @include cssTransform(translateY(8px)); }
+			&:after { @include cssTransform(translateY(-8px)); }
+		}
+	}
+
+	// arrow transformation
+	&.showAdaptiveMenu .menuBurgerButton span {
+		&:before { @include cssTransform(translateY(6px) translateX(-9px) rotate(45deg) scaleX(0.5)); }
+		&:after { @include cssTransform(translateY(-6px) translateX(-9px) rotate(-45deg) scaleX(0.5)); }
+	}
+}
+// ------------------------
+
+
+
+// page content container
+// ------------------------
+.pageContentContainer {
+	background: #999;
+}
+// ------------------------
+
+
+
+

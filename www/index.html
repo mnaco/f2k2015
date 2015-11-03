@@ -3,8 +3,10 @@
 	<head>
 		<meta charset="utf-8">
 		<title>title</title>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/main.css">
-		<!-- <script src="script.js"></script> -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/script.js"></script>
 	</head>
 	<body>
 
@@ -14,28 +16,51 @@
 
 			<!-- page header -->
 			<div class="pageHeader">
+
+				<span class="menuBurgerButton" data-class-setter-on-click = '{"classname":"showAdaptiveMenu", "method":"toggle", "target":".pageHeader"}'>
+					<span></span>
+				</span>
+
+				<div class="headeRightContainer">
+					<!-- language selector -->
+					<div class="headerLang">
+						<ul>
+							<li class="active"><a href="#">English</a></li>
+							<li><a href="#">Deutsch</a></li>
+						</ul>
+					</div>
+					<!-- contact box -->
+					<div class="headerContacts">
+						<h3>+49 89 944 68 002</h3>
+						<div>Address &middot; ZIP &middot; City</div>
+					</div>
+				</div>
+
+				<!-- logo -->
 				<div class="headerLogo">logo</div>
-				<div class="siteNav">
-					<ul>
-						<li><a href="">Cars for sale</a></li>
-						<li><a href="">References</a></li>
-						<li><a href="">Workshop</a></li>
-						<li><a href="">Rare parts</a></li>
-						<li><a href="">About Us</a></li>
-						<li><a href="">Contact Us</a></li>
-					</ul>
+
+				<div class="clearFloats"></div>
+
+				<!-- navigation -->
+				<div class="navContainer">
+					<div class="siteNav">
+						<ul>
+							<li><a href="#">Cars for sale</a></li>
+							<li><a href="#">References</a></li>
+							<li class="active"><a href="">Workshop</a></li>
+							<li><a href="">Rare parts</a></li>
+							<li><a href="">About Us</a></li>
+							<li><a href="">Contact Us</a></li>
+						</ul>
+					</div>
 				</div>
-				<div class="headerLang">Deutsch</div>
-				<div class="headerContacts">
-					<div class="conpmanyPhone">+49 89 944 68 002</div>
-					<div>Address * ZIP * City</div>
-				</div>
+
 			</div>
 			<!-- END page header -->
 
 
 			<!-- page content -->
-			<div class="pageContent">
+			<div class="pageContentContainer">
 				... content goes here ...
 			</div>
 			<!-- END page content -->
@@ -48,7 +73,7 @@
 						<li><a href="">Home</a></li>
 						<li><a href="">Cars for sale</a></li>
 						<li><a href="">References</a></li>
-						<li><a href="">Workshop</a></li>
+						<li class="active"><a href="">Workshop</a></li>
 						<li><a href="">Rare parts</a></li>
 						<li><a href="">About Us</a></li>
 						<li><a href="">Contact Us</a></li>

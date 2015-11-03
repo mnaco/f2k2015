@@ -1,0 +1,41 @@
+@media ($smallScreen) {
+
+	$adaptiveMenuWidth: 240px;
+	
+	body {  }
+
+	.bodyWrapper { padding: 5px; }
+	.pageWrapper { width: 100%; }
+	
+	// adaptive menu
+	.navContainer {
+		position: absolute;
+		top: 0; 
+		width: $adaptiveMenuWidth;
+		font-size: 1.1rem;
+		@include single-transition(left, .2s, ease-in, .1s);
+		left: -$adaptiveMenuWidth;
+	}
+	.showAdaptiveMenu {
+		.navContainer {	
+			left: 0;
+		}
+	}
+
+	// header
+	.pageHeader {
+		.menuBurgerButton { display: block; } 
+		.siteNav {
+			border-radius: 0 0 10px 0;
+			padding: 60px 0 10px;
+			li {
+				display: block;
+				padding: 0;
+				&:last-child { float: none; }
+				a { padding: 1em .5em; }
+			}
+		}
+	}
+	.headeRightContainer { display: none; }
+	.headerLogo	{ float: right; }
+}

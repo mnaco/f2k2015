@@ -26,3 +26,11 @@
      -moz-transform: #{$type}($originVal);
           transform: #{$type}($originVal);
 }
+
+
+// css transform
+@mixin cssTransform($transformProperties) {
+  transform: $transformProperties;
+  -ms-transform: $transformProperties; // IE 9
+  -webkit-transform: $transformProperties; // Opera, Chrome, and Safari
+}
