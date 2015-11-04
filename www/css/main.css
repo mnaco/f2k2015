@@ -672,6 +672,48 @@ h1, h2, h3, h4, h5, h6 {
   background: #3a3b3f;
 }
 
+.pageCar .carThumbs ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.pageCar .carThumbs li {
+  float: left;
+  width: 95px;
+  margin: 0 5px 5px 0;
+}
+.pageCar .carThumbs li img {
+  display: block;
+  width: 100%;
+  border: 2px solid #ccc;
+}
+.pageCar .carThumbs li.active img {
+  border-color: #ffe71b;
+}
+.pageCar .carDesription {
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
+  padding-top: 10px;
+  font-size: .9em;
+}
+.pageCar .carImgPlaceholder img {
+  width: 100%;
+}
+
+.carTechDetails dt, .carTechDetails dd {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-size: .9em;
+}
+.carTechDetails dt {
+  width: 40%;
+}
+.carTechDetails dd {
+  color: #eee;
+  width: 60%;
+}
+
 @media (max-width: 980px) {
   body {
     font-size: 1.2em;
