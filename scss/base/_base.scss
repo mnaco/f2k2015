@@ -291,7 +291,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 	.carPic {
 		img { 
 			width: 100%;
-			border: 1px solid #ccc;
+			border: 1px solid $borderColor;
 			padding: 1px;
 		}
 	}
@@ -308,7 +308,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 			margin: 0 4% 4% 0;
 			img { 
 				width: 100%;
-				border: 1px solid #ccc;
+				border: 1px solid $borderColor;
 				padding: 1px;
 			}
 		}
@@ -332,14 +332,14 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 		@include displayFlex;
 		@include flex-wrap(wrap);
 		li {
-			@include flex(0 0 23%);
+			@include flex(0 0 31%);
 			margin: 0 2% 2% 0;
 			padding: 2px;
-			border: 1px solid #ccc;
+			border: 1px solid $borderColor;
 			text-align: center;
 			img { width: 100%; }
 			h5 { 
-				font-size: 1.2em;
+				font-size: 1.1em;
 				margin: .5em;
 			}
 			&:hover {
@@ -349,6 +349,38 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 	}
 }
 // ------------------------
+
+
+
+// page content > page WORKSHOP
+// ------------------------
+.pageWorkshop {
+	
+}
+.workshopThumbs {
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0; 	
+		float: right;
+	}
+	li {
+		display: block;
+		float: left;
+		width: 31%;
+		margin: 0 3% 3% 0;
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+		img { 
+			padding: 2px;
+			border: 1px solid #ccc;
+			width: 100%;
+		} 
+		&:hover img { border-color: #fff; }
+		a.active img { border-color: $yellowColor; }
+	}
+}
 
 
 
@@ -369,18 +401,17 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 			img { 
 				display: block;
 				width: 100%;
-				border: 2px solid #ccc;
+				border: 2px solid $borderColor;
 			}
-			a.active {
-				img { border-color: $yellowColor; }
-			}
+			&:hover img { border-color: #fff; }
+			a.active img { border-color: $yellowColor; }
 		}
 	}
 	.carDetails {
 		// font-size: .9em;
 	}
 	.carDesription {
-		border-top: 1px solid #ccc;
+		border-top: 1px solid $borderColor;
 		margin: 10px 0;
 		padding-top: 10px;
 		font-size: .9em;

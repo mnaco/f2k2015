@@ -709,7 +709,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .carItem .carPic img {
   width: 100%;
-  border: 1px solid #ccc;
+  border: 1px solid #999;
   padding: 1px;
 }
 .carItem .carPics ul {
@@ -725,7 +725,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .carItem .carPics li img {
   width: 100%;
-  border: 1px solid #ccc;
+  border: 1px solid #999;
   padding: 1px;
 }
 .carItem .carDetails {
@@ -748,23 +748,50 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
 }
 .pageReferences .referenceList li {
-  -webkit-flex: 0 0 23%;
-  -moz-flex: 0 0 23%;
-  -ms-flex: 0 0 23%;
-  flex: 0 0 23%;
+  -webkit-flex: 0 0 31%;
+  -moz-flex: 0 0 31%;
+  -ms-flex: 0 0 31%;
+  flex: 0 0 31%;
   margin: 0 2% 2% 0;
   padding: 2px;
-  border: 1px solid #ccc;
+  border: 1px solid #999;
   text-align: center;
 }
 .pageReferences .referenceList li img {
   width: 100%;
 }
 .pageReferences .referenceList li h5 {
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin: .5em;
 }
 .pageReferences .referenceList li:hover {
+  border-color: #ffe71b;
+}
+
+.workshopThumbs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  float: right;
+}
+.workshopThumbs li {
+  display: block;
+  float: left;
+  width: 31%;
+  margin: 0 3% 3% 0;
+}
+.workshopThumbs li:nth-child(3n) {
+  margin-right: 0;
+}
+.workshopThumbs li img {
+  padding: 2px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+.workshopThumbs li:hover img {
+  border-color: #fff;
+}
+.workshopThumbs li a.active img {
   border-color: #ffe71b;
 }
 
@@ -781,13 +808,16 @@ h1, h2, h3, h4, h5, h6 {
 .pageCar .carThumbs li img {
   display: block;
   width: 100%;
-  border: 2px solid #ccc;
+  border: 2px solid #999;
+}
+.pageCar .carThumbs li:hover img {
+  border-color: #fff;
 }
 .pageCar .carThumbs li a.active img {
   border-color: #ffe71b;
 }
 .pageCar .carDesription {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #999;
   margin: 10px 0;
   padding-top: 10px;
   font-size: .9em;

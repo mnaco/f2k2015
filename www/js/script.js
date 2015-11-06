@@ -77,6 +77,11 @@ jQuery(function() {
 	    	speed: 300,
 	    	pagerCustom: '.carThumbs'
 	    });
+	    // workshop gallery
+	    jQuery('.bxslider.workshopGallery').bxSlider({
+	    	speed: 300,
+	    	pagerCustom: '.workshopThumbs'
+	    });
 	});
 	/*
 	* ****************************  */
