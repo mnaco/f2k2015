@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 // page wrapper
 // ------------------------
 .pageWrapper {
-	width: 980px;
+	width: $pageWidth;
 	margin: 0 auto;
 	text-align: left;
 }
@@ -230,7 +230,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 
 
 
-// page content 
+// page content area  
 // ------------------------
 .pageContentContainer {
 	background: #999;
@@ -250,6 +250,8 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 
 
 
+
+
 // page content > page Home 
 // ------------------------
 .pageHome {
@@ -263,6 +265,53 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 
 .bxslider { margin: 0 !important; }
 // ------------------------
+
+
+
+
+
+// page content > page Cars List (Cars for sale)
+// ------------------------
+.carItem {
+	.carTitle { 
+		font-size: 1.8em;
+		padding: 20px;
+		margin: 0;
+		background: #37383a;
+	}
+	.grid {
+		background: #4f5053;
+		padding: 20px;
+	}
+	.carPic {
+		img { 
+			width: 100%;
+			border: 1px solid #ccc;
+			padding: 1px;
+		}
+	}
+	.carPics {
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			display: inline-block;
+			width: 46%;
+			float: left;
+			margin: 0 4% 4% 0;
+			img { 
+				width: 100%;
+				border: 1px solid #ccc;
+				padding: 1px;
+			}
+		}
+	}
+	.carDetails { font-size: 1em; }
+}
+// ------------------------
+
 
 
 
@@ -305,6 +354,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 }
 
 .carTechDetails {
+	margin: 0 0 20px;
 	dt, dd {
 		display: inline-block;
 		margin: 0;

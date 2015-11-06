@@ -435,6 +435,14 @@ th {
   width: 12.5%;
 }
 
+.col-1-6 {
+  width: 16.66%;
+}
+
+.col-1-5 {
+  width: 20%;
+}
+
 .grid-pad {
   padding: 20px 0 20px 20px;
 }
@@ -685,6 +693,41 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 !important;
 }
 
+.carItem .carTitle {
+  font-size: 1.8em;
+  padding: 20px;
+  margin: 0;
+  background: #37383a;
+}
+.carItem .grid {
+  background: #4f5053;
+  padding: 20px;
+}
+.carItem .carPic img {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 1px;
+}
+.carItem .carPics ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.carItem .carPics li {
+  display: inline-block;
+  width: 46%;
+  float: left;
+  margin: 0 4% 4% 0;
+}
+.carItem .carPics li img {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 1px;
+}
+.carItem .carDetails {
+  font-size: 1em;
+}
+
 .pageCar .carThumbs ul {
   list-style: none;
   margin: 0;
@@ -713,6 +756,9 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
+.carTechDetails {
+  margin: 0 0 20px;
+}
 .carTechDetails dt, .carTechDetails dd {
   display: inline-block;
   margin: 0;
@@ -788,6 +834,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
   [class*='col-'] {
     width: 100% !important;
+    padding: 0 !important;
   }
 }
 /**
@@ -842,7 +889,7 @@ h1, h2, h3, h4, h5, h6 {
 /* LOADER */
 .bx-wrapper .bx-loading {
   min-height: 50px;
-  background: url(images/bx_loader.gif) center center no-repeat #fff;
+  background: url(/img/vendors/bxslider/bx_loader.gif) center center no-repeat #fff;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -887,12 +934,12 @@ h1, h2, h3, h4, h5, h6 {
 /* DIRECTION CONTROLS (NEXT / PREV) */
 .bx-wrapper .bx-prev {
   left: 10px;
-  background: url(images/controls.png) no-repeat 0 -32px;
+  background: url(/img/vendors/bxslider/controls.png) no-repeat 0 -32px;
 }
 
 .bx-wrapper .bx-next {
   right: 10px;
-  background: url(images/controls.png) no-repeat -43px -32px;
+  background: url(/img/vendors/bxslider/controls.png) no-repeat -43px -32px;
 }
 
 .bx-wrapper .bx-prev:hover {
@@ -929,7 +976,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 10px;
   height: 11px;
   outline: 0;
-  background: url(images/controls.png) -86px -11px no-repeat;
+  background: url(/img/vendors/bxslider/controls.png) -86px -11px no-repeat;
   margin: 0 3px;
 }
 
@@ -944,7 +991,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 9px;
   height: 11px;
   outline: 0;
-  background: url(images/controls.png) -86px -44px no-repeat;
+  background: url(/img/vendors/bxslider/controls.png) -86px -44px no-repeat;
   margin: 0 3px;
 }
 
