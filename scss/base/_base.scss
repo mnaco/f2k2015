@@ -41,6 +41,11 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 
 
 
+// responsive images
+.rImg { width: 100%; }
+
+
+
 // body wrapper
 // ------------------------
 .bodyWrapper {
@@ -312,6 +317,38 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 }
 // ------------------------
 
+
+
+
+
+// page content > page References 
+// ------------------------
+.pageReferences {
+	.contentInsider { padding: 20px 0 0 20px; }
+	.referenceList {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		@include displayFlex;
+		@include flex-wrap(wrap);
+		li {
+			@include flex(0 0 23%);
+			margin: 0 2% 2% 0;
+			padding: 2px;
+			border: 1px solid #ccc;
+			text-align: center;
+			img { width: 100%; }
+			h5 { 
+				font-size: 1.2em;
+				margin: .5em;
+			}
+			&:hover {
+				border-color: $yellowColor;
+			}
+		}
+	}
+}
+// ------------------------
 
 
 

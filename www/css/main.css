@@ -499,6 +499,10 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
 }
 
+.rImg {
+  width: 100%;
+}
+
 .bodyWrapper {
   text-align: center;
 }
@@ -726,6 +730,42 @@ h1, h2, h3, h4, h5, h6 {
 }
 .carItem .carDetails {
   font-size: 1em;
+}
+
+.pageReferences .contentInsider {
+  padding: 20px 0 0 20px;
+}
+.pageReferences .referenceList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.pageReferences .referenceList li {
+  -webkit-flex: 0 0 23%;
+  -moz-flex: 0 0 23%;
+  -ms-flex: 0 0 23%;
+  flex: 0 0 23%;
+  margin: 0 2% 2% 0;
+  padding: 2px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+.pageReferences .referenceList li img {
+  width: 100%;
+}
+.pageReferences .referenceList li h5 {
+  font-size: 1.2em;
+  margin: .5em;
+}
+.pageReferences .referenceList li:hover {
+  border-color: #ffe71b;
 }
 
 .pageCar .carThumbs ul {
