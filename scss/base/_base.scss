@@ -249,6 +249,24 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 // ------------------------
 
 
+
+// page content > page Home 
+// ------------------------
+.pageHome {
+	.bx-wrapper .bx-pager { 
+		bottom: 0;
+    	right: 0;
+    	width: auto;
+    	a { margin: 0 3px 0 0 !important; }
+	}
+}
+
+.bxslider { margin: 0 !important; }
+// ------------------------
+
+
+
+
 // page content > page Car 
 // ------------------------
 .pageCar {
@@ -261,13 +279,13 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 		li { 
 			float: left;
 			width: 95px;
-			margin: 0 5px 5px 0;
+			margin: 5px 5px 0 0;
 			img { 
 				display: block;
 				width: 100%;
 				border: 2px solid #ccc;
 			}
-			&.active {
+			a.active {
 				img { border-color: $yellowColor; }
 			}
 		}
@@ -299,7 +317,6 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 		width: 60%;
 	}
 }
-
 // ------------------------
 
 

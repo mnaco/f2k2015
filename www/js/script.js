@@ -63,4 +63,23 @@ jQuery(function() {
 	 * ****************************  */
 
 
+
+	/* ****************************
+	// image slider
+	*/
+	jQuery(function() {
+		// home slides
+	    jQuery('.bxslider.homeSlides').bxSlider({
+	    	auto: true
+	    });
+	    // car gallery
+	    jQuery('.bxslider.carGallery').bxSlider({
+	    	speed: 300,
+	    	pagerCustom: '.carThumbs'
+	    });
+	});
+	/*
+	* ****************************  */
+
+
 });
