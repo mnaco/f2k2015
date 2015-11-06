@@ -465,7 +465,7 @@ th {
 }
 */
 body {
-  background: #333;
+  background: #000;
   color: #ccc;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
@@ -565,6 +565,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 28px;
   margin: 0 0 .2em;
   line-height: 1;
+}
+
+.headerLogo {
+  padding-top: 30px;
 }
 
 .headeRightContainer {
@@ -754,9 +758,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 .carItem .carTitle {
   font-size: 1.8em;
-  padding: 20px;
   margin: 0;
   background: #37383a;
+}
+.carItem .carTitle a {
+  display: block;
+  padding: 20px;
 }
 .carItem .grid {
   background: #4f5053;
@@ -891,7 +898,15 @@ h1, h2, h3, h4, h5, h6 {
   font-size: .9em;
 }
 .carTechDetails dt {
-  width: 40%;
+  position: relative;
+  width: 35%;
+  padding-right: 5%;
+}
+.carTechDetails dt:after {
+  position: absolute;
+  right: 2%;
+  display: inline-block;
+  content: ":";
 }
 .carTechDetails dd {
   color: #eee;
