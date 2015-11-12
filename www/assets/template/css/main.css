@@ -1029,7 +1029,7 @@ h1, h2, h3, h4, h5, h6 {
 /* LOADER */
 .bx-wrapper .bx-loading {
   min-height: 50px;
-  background: url(/img/vendors/bxslider/bx_loader.gif) center center no-repeat #fff;
+  background: url(assets/tempalte/img/vendors/bxslider/bx_loader.gif) center center no-repeat #fff;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -1074,12 +1074,12 @@ h1, h2, h3, h4, h5, h6 {
 /* DIRECTION CONTROLS (NEXT / PREV) */
 .bx-wrapper .bx-prev {
   left: 10px;
-  background: url(/img/vendors/bxslider/controls.png) no-repeat 0 -32px;
+  background: url(../img/vendors/bxslider/controls.png) no-repeat 0 -32px;
 }
 
 .bx-wrapper .bx-next {
   right: 10px;
-  background: url(/img/vendors/bxslider/controls.png) no-repeat -43px -32px;
+  background: url(../img/vendors/bxslider/controls.png) no-repeat -43px -32px;
 }
 
 .bx-wrapper .bx-prev:hover {
@@ -1116,7 +1116,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 10px;
   height: 11px;
   outline: 0;
-  background: url(/img/vendors/bxslider/controls.png) -86px -11px no-repeat;
+  background: url(../img/vendors/bxslider/controls.png) -86px -11px no-repeat;
   margin: 0 3px;
 }
 
@@ -1131,7 +1131,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 9px;
   height: 11px;
   outline: 0;
-  background: url(/img/vendors/bxslider/controls.png) -86px -44px no-repeat;
+  background: url(../img/vendors/bxslider/controls.png) -86px -44px no-repeat;
   margin: 0 3px;
 }
 
