@@ -45,6 +45,17 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 .rImg { width: 100%; }
 
 
+// page background image
+.bodyBgImg {
+	position: fixed;
+	z-index: -1;
+	text-align: center;
+	width: 100%; 
+	img { 
+		// width: 100%;  
+	}
+}
+
 
 // body wrapper
 // ------------------------
