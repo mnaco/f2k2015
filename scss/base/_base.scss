@@ -6,10 +6,12 @@
 
 html {}
 body {
-	background: #000;
 	color: #ccc;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
+	background: #000;
+	background-repeat: no-repeat;
+	background-position: top center;
 }
 
 
@@ -21,7 +23,10 @@ a {
 	text-decoration: none; 
 	color: #fff;
 }
-h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+h1, h2, h3, h4, h5, h6 { 
+	font-weight: normal; 
+	margin-top: 0;
+}
 
 // floats
 .fLt { float: left; }

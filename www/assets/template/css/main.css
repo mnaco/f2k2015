@@ -465,10 +465,12 @@ th {
 }
 */
 body {
-  background: #000;
   color: #ccc;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
+  background: #000;
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 
 a {
@@ -478,6 +480,7 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
+  margin-top: 0;
 }
 
 .fLt {
@@ -1036,7 +1039,7 @@ h1, h2, h3, h4, h5, h6 {
 /* LOADER */
 .bx-wrapper .bx-loading {
   min-height: 50px;
-  background: url(assets/tempalte/img/vendors/bxslider/bx_loader.gif) center center no-repeat #fff;
+  background: url(../img/vendors/bxslider/bx_loader.gif) center center no-repeat #fff;
   height: 100%;
   width: 100%;
   position: absolute;
