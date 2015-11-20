@@ -534,6 +534,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pageHeader {
+  position: relative;
   min-height: 60px;
 }
 .pageHeader .siteNav {
@@ -566,19 +567,27 @@ h1, h2, h3, h4, h5, h6 {
 .headerContacts {
   float: right;
   background: #000;
-  padding: 7px 10px;
-  margin: 5px 0;
+  margin: 30px 0 0;
+  padding: 5px;
   text-align: center;
   font-size: 12px;
 }
 .headerContacts h3 {
   font-size: 28px;
-  margin: 0 0 .2em;
+  margin: 0;
   line-height: 1;
 }
 
 .headerLogo {
   padding-top: 30px;
+}
+.headerLogo a {
+  display: block;
+  width: 150px;
+  height: 52px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: url("../img/protrade_logo_yellow_black.png");
 }
 
 .headeRightContainer {
@@ -586,9 +595,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .headerLang {
+  position: absolute;
+  top: 3px;
+  right: 0;
   font-size: .8em;
   text-align: right;
   padding-top: 5px;
+}
+.headerLang a {
+  color: #999;
+}
+.headerLang a:hover {
+  color: #ccc;
 }
 .headerLang ul {
   list-style: none;
@@ -617,17 +635,23 @@ h1, h2, h3, h4, h5, h6 {
   border-top: 1px solid #999;
 }
 
+.headerPageTitle {
+  display: none;
+  font-size: 18px;
+  color: #000;
+  padding: 14px 0 0 54px;
+  float: left;
+}
+
 .pageHeader .menuBurgerButton {
   display: none;
   font-size: 24px;
   position: absolute;
-  top: -5px;
-  left: -5px;
-  z-index: 2;
-  width: 56px;
-  height: 56px;
+  z-index: 9;
+  width: 54px;
+  height: 54px;
   cursor: pointer;
-  background: #f3f3f3;
+  background: #ffe71b;
 }
 .pageHeader .menuBurgerButton span {
   position: absolute;
@@ -638,7 +662,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 50%;
   left: 20%;
   margin-top: -2px;
-  background-color: #900;
+  background-color: #000;
   border-radius: 1em;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -654,7 +678,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   left: 0;
-  background: #900;
+  background: #000;
   border-radius: 1em;
   transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
@@ -923,13 +947,36 @@ h1, h2, h3, h4, h5, h6 {
   width: 60%;
 }
 
+.pageAbout {
+  margin: 1em 0;
+}
+.pageAbout .protradeTeam {
+  font-size: .9em;
+}
+.pageAbout .protradeTeam img {
+  display: block;
+  padding: 2px;
+  border: 1px solid #999;
+}
+.pageAbout .protradeTeam h3 {
+  margin: 10px 0 0 !important;
+}
+.pageAbout .aboutText {
+  padding: 20px;
+  min-height: 200px;
+  padding-right: 260px;
+  background-image: url("../../images/about_page_bcgr.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.pageContact .contentInsider h2, .pageContact .contentInsider h3, .pageContact .contentInsider h4 {
+  margin: 0 0 3px;
+}
+
 @media (max-width: 980px) {
   body {
     font-size: 1.2em;
-  }
-
-  .bodyWrapper {
-    padding: 5px;
   }
 
   .pageWrapper {
@@ -943,7 +990,7 @@ h1, h2, h3, h4, h5, h6 {
 
   .navContainer {
     position: absolute;
-    z-index: 1;
+    z-index: 8;
     top: 0;
     width: 240px;
     font-size: 1.1rem;
@@ -955,6 +1002,10 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
   }
 
+  .pageHeader {
+    min-height: 54px;
+    background: #ffe71b;
+  }
   .pageHeader .menuBurgerButton {
     display: block;
   }
@@ -979,6 +1030,23 @@ h1, h2, h3, h4, h5, h6 {
 
   .headerLogo {
     float: right;
+    padding: 8px 3px 0;
+  }
+  .headerLogo a {
+    width: 102px;
+    height: 37px;
+    background-position: -198px -60px;
+  }
+
+  .headerPageTitle {
+    display: block;
+  }
+
+  .headerLang {
+    top: 12px;
+  }
+  .headerLang a {
+    color: #000 !important;
   }
 }
 @media (max-width: 768px) {
@@ -1108,7 +1176,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 32px;
   height: 32px;
   text-indent: -9999px;
-  z-index: 9999;
+  z-index: 5;
 }
 
 .bx-wrapper .bx-controls-direction a.disabled {

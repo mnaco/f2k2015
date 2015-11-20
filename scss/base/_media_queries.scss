@@ -4,7 +4,7 @@
 	
 	body { font-size: 1.2em; }
 
-	.bodyWrapper { padding: 5px; }
+	//.bodyWrapper { padding: 5px; }
 	.pageWrapper { width: 100%; }
 
 	.pageTitle,
@@ -13,7 +13,7 @@
 	// adaptive menu
 	.navContainer {
 		position: absolute;
-		z-index: 1;
+		z-index: 8;
 		top: 0; 
 		width: $adaptiveMenuWidth;
 		font-size: 1.1rem;
@@ -28,6 +28,8 @@
 
 	// header
 	.pageHeader {
+		min-height: 54px;
+		background: $yellowColor;
 		.menuBurgerButton { display: block; } 
 		.siteNav {
 			border-radius: 0 0 10px 0;
@@ -41,7 +43,20 @@
 		}
 	}
 	.headeRightContainer { display: none; }
-	.headerLogo	{ float: right; }
+	.headerLogo	{ 
+		float: right; 
+		padding: 8px 3px 0;
+		a { 
+			width: 102px;
+			height: 37px;
+			background-position: -198px -60px;
+			}
+	}
+	.headerPageTitle { display: block; }
+	.headerLang { 
+		top: 12px; 
+		a { color: #000 !important; }
+	}
 
 }
 
