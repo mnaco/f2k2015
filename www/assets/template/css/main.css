@@ -737,6 +737,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .carItem {
   position: relative;
+  margin: 20px 0 0;
 }
 .carItem .statusLabel {
   position: absolute;
@@ -802,6 +803,7 @@ h1, h2, h3, h4, h5, h6 {
 .carItem .grid {
   background: #4f5053;
   padding: 20px;
+  margin: 0;
 }
 .carItem .carPic img {
   width: 100%;
@@ -815,9 +817,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .carItem .carPics li {
   display: inline-block;
-  width: 46%;
+  width: 48%;
   float: left;
-  margin: 0 4% 4% 0;
+  margin: 0 2% 2% 0;
 }
 .carItem .carPics li img {
   width: 100%;
@@ -828,13 +830,52 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1em;
 }
 
+.mainGallery {
+  padding: 20px 20px 10px;
+  background: #333;
+}
+.mainGallery + .contentInsider {
+  padding-top: 10px;
+}
+
+.backToList {
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 0 0 32px;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #ffe71b;
+}
+.backToList:before {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 28px;
+  height: 24px;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: -86px -8px;
+}
+.backToList:hover {
+  color: #fff;
+}
+.backToList:hover:before {
+  background-position: -126px -8px;
+}
+
 .pageReferences .contentInsider {
   padding: 20px 0 0 20px;
 }
-.pageReferences .referenceList {
+.pageReferences .referenceList > ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  font-size: .9em;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
@@ -843,7 +884,7 @@ h1, h2, h3, h4, h5, h6 {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-.pageReferences .referenceList li {
+.pageReferences .referenceList > ul li {
   -webkit-flex: 0 0 31%;
   -moz-flex: 0 0 31%;
   -ms-flex: 0 0 31%;
@@ -853,15 +894,16 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid #999;
   text-align: center;
 }
-.pageReferences .referenceList li img {
+.pageReferences .referenceList > ul li img {
   width: 100%;
 }
-.pageReferences .referenceList li h5 {
-  font-size: 1.1em;
-  margin: .5em;
+.pageReferences .referenceList > ul li h5 {
+  font-size: 1.2em;
+  margin: .5em 10px .1em;
+  color: #fff;
 }
-.pageReferences .referenceList li:hover {
-  border-color: #ffe71b;
+.pageReferences .referenceList > ul li h3 {
+  margin: .1em 10px .7em;
 }
 
 .workshopThumbs ul {
@@ -913,8 +955,7 @@ h1, h2, h3, h4, h5, h6 {
   border-color: #ffe71b;
 }
 .pageCar .carDesription {
-  border-top: 1px solid #999;
-  margin: 10px 0;
+  margin: 0;
   padding-top: 10px;
   font-size: .9em;
 }

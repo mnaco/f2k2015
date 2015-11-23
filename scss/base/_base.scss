@@ -323,6 +323,7 @@ h1, h2, h3, h4, h5, h6 {
 .carItem {
 
 	position: relative;
+	margin: 20px 0 0;
 
 	// labels
 	.statusLabel { 
@@ -383,6 +384,7 @@ h1, h2, h3, h4, h5, h6 {
 	.grid {
 		background: #4f5053;
 		padding: 20px;
+		margin: 0;
 	}
 	.carPic {
 		img { 
@@ -399,9 +401,9 @@ h1, h2, h3, h4, h5, h6 {
 		}
 		li {
 			display: inline-block;
-			width: 46%;
+			width: 48%;
 			float: left;
-			margin: 0 4% 4% 0;
+			margin: 0 2% 2% 0;
 			img { 
 				width: 100%;
 				border: 1px solid $borderColor;
@@ -415,16 +417,60 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
+// main gallery [used on multiplae pages]
+// ------------------------
+.mainGallery {
+	padding: 20px 20px 10px;
+	background: #333;
+	+ .contentInsider {
+		padding-top: 10px;
+	}
+}
+
+
+// main gallery [used on multiplae pages]
+// ------------------------
+.backToList {
+	position: relative;
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 0 0 32px;
+	margin: 0;
+	text-transform: uppercase;
+	font-size: 16px;
+	color: $yellowColor;
+	&:before {
+		display: block;
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 8px;
+		width: 28px;
+		height: 24px;
+		background-image: url('../img/sprite.png');
+		background-repeat: no-repeat;
+		background-position: -86px -8px;
+	}
+	&:hover {
+		color: #fff;
+		&:before {
+			background-position: -126px -8px;
+		}
+	}
+}
+
 
 
 // page content > page REFERENCES 
 // ------------------------
 .pageReferences {
 	.contentInsider { padding: 20px 0 0 20px; }
-	.referenceList {
+	.referenceList > ul {
 		list-style: none;
 		margin: 0;
 		padding: 0;
+		font-size: .9em;
 		@include displayFlex;
 		@include flex-wrap(wrap);
 		li {
@@ -435,11 +481,13 @@ h1, h2, h3, h4, h5, h6 {
 			text-align: center;
 			img { width: 100%; }
 			h5 { 
-				font-size: 1.1em;
-				margin: .5em;
+				font-size: 1.2em;
+				margin: .5em 10px .1em;
+				color: #fff;
 			}
+			h3 { margin: .1em 10px .7em; }
 			&:hover {
-				border-color: $yellowColor;
+				// border-color: $yellowColor;
 			}
 		}
 	}
@@ -507,8 +555,7 @@ h1, h2, h3, h4, h5, h6 {
 		// font-size: .9em;
 	}
 	.carDesription {
-		border-top: 1px solid $borderColor;
-		margin: 10px 0;
+		margin: 0;
 		padding-top: 10px;
 		font-size: .9em;
 	}
