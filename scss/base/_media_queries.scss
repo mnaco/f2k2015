@@ -145,4 +145,17 @@
 	}
 }
 
+// hi-res devices
+@media 
+	(min-resolution: 192dpi), 
+	(-webkit-min-device-pixel-ratio: 2), 
+	(min--moz-device-pixel-ratio: 2), 
+	(-o-min-device-pixel-ratio: 2/1), 
+	(min-device-pixel-ratio: 2), 
+	(min-resolution: 2dppx) {
 
+  	[class*='col-'] {
+		width: 100% !important;
+		padding: 0 !important;
+	}
+}
