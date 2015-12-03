@@ -134,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
 .headerContacts {
 	float: right;
 	background: #000;
-	margin: 30px 0 0;
+	margin: 20px 0 0;
 	padding: 5px;
 	text-align: center;
 	font-size: 12px;
@@ -147,7 +147,7 @@ h1, h2, h3, h4, h5, h6 {
 
 // header logo
 .headerLogo {
-	padding-top: 30px;
+	padding-top: 20px;
 	a {
 		display: block;
 		width: 150px;
@@ -165,6 +165,7 @@ h1, h2, h3, h4, h5, h6 {
 
 // header language selector
 .headerLang {
+	display: none;
 	position: absolute;
 	top: 3px;
 	right: 0;
@@ -316,11 +317,12 @@ h1, h2, h3, h4, h5, h6 {
 // ------------------------
 .pageHome {
 	.bx-wrapper .bx-pager { 
-		bottom: 0;
-    	right: 0;
-    	width: auto;
-    	a { margin: 0 3px 0 0 !important; }
+		bottom: 5px;
+    right: 5px;;
+    width: auto;
+    // a { margin: 0 3px 0 0 !important; }
 	}
+	.siteNav { margin-bottom: 0 }
 }
 
 .bxslider { margin: 0 !important; }
@@ -627,7 +629,6 @@ h1, h2, h3, h4, h5, h6 {
 // page content > page ABOUT 
 // ------------------------
 .pageAbout {
-	margin: 1em 0;
 	.protradeTeam {
 		font-size: .9em;
 		padding-bottom: 2em;

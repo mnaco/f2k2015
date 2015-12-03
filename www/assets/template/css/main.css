@@ -410,9 +410,7 @@ th {
 [class*='col-'] {
   float: left;
   padding-right: 20px;
-}
-.grid [class*='col-']:last-of-type {
-  padding-right: 0;
+  padding: 0 10px;
 }
 
 .col-2-3 {
@@ -567,7 +565,7 @@ h1, h2, h3, h4, h5, h6 {
 .headerContacts {
   float: right;
   background: #000;
-  margin: 30px 0 0;
+  margin: 20px 0 0;
   padding: 5px;
   text-align: center;
   font-size: 12px;
@@ -579,7 +577,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .headerLogo {
-  padding-top: 30px;
+  padding-top: 20px;
 }
 .headerLogo a {
   display: block;
@@ -595,6 +593,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .headerLang {
+  display: none;
   position: absolute;
   top: 3px;
   right: 0;
@@ -738,12 +737,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pageHome .bx-wrapper .bx-pager {
-  bottom: 0;
-  right: 0;
+  bottom: 5px;
+  right: 5px;
   width: auto;
 }
-.pageHome .bx-wrapper .bx-pager a {
-  margin: 0 3px 0 0 !important;
+.pageHome .siteNav {
+  margin-bottom: 0;
 }
 
 .bxslider {
@@ -1036,9 +1035,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 55%;
 }
 
-.pageAbout {
-  margin: 1em 0;
-}
 .pageAbout .protradeTeam {
   font-size: .9em;
   padding-bottom: 2em;
@@ -1287,19 +1283,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a {
-  background: #666;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   text-indent: -9999px;
   display: block;
   width: 10px;
   height: 10px;
-  margin: 0 5px;
+  margin: 0 3px;
   outline: 0;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a:hover,
 .bx-wrapper .bx-pager.bx-default-pager a.active {
-  background: #000;
+  background: rgba(0, 0, 0, 0.9);
 }
 
 /* DIRECTION CONTROLS (NEXT / PREV) */
