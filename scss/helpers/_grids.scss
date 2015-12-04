@@ -10,11 +10,8 @@
 $pad: 20px;
 
 .grid {
-  // background: white;
   margin: 0 0 $pad 0;
-  
   &:after {
-    /* Or @extend clearfix */
     content: "";
     display: table;
     clear: both;
@@ -24,9 +21,9 @@ $pad: 20px;
 [class*='col-'] {
 	float: left;
   padding-right: $pad;
-  padding: 0 10px;
+  padding: 0 $pad 0 0;
   .grid &:last-of-type {
-  	// padding-right: 0;
+  	padding-right: 0;
   }
 }
 .col-2-3 {
@@ -51,6 +48,10 @@ $pad: 20px;
   width: 20%;
 }
 
+
+.gridInsider {
+  padding: $pad;
+}
 
 // OPTIONAL: Opt-in outside padding 
 .grid-pad {
