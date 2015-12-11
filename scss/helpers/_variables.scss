@@ -1,3 +1,6 @@
+// css-Images
+$imgUrl: 'http://new.protrade2000.de/assets/template/img/';
+ 
 // dimentions
 $pageWidth: 980px;
 
@@ -7,6 +10,7 @@ $borderColor: #999;
 
 // media queries
 $smallScreen: 'max-width: #{$pageWidth}';			// small screen [general]
+$mediaScreenDefault: '(max-width: 980px)';			// default
 $mediaScreenLaptop: '(max-width: 1024px)';			// laptop
 $mediaScreenTablet: '(max-width: 768px)';			// tablets
 $mediaScreenPhablet: '(max-width: 480px)';			// smartphones

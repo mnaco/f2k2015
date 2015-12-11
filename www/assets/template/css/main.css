@@ -487,6 +487,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
 }
 
+h1 {
+  font-size: 1.6em;
+}
+
 p {
   margin-top: 0;
 }
@@ -588,14 +592,29 @@ p {
 
 .headerLogo {
   padding-top: 15px;
+  /*
+  a {
+  	display: block;
+  	width: 150px;
+  	height: 52px;
+  	background-repeat: no-repeat;
+  	background-position: 0 0;
+  	background-image: url($imgUrl+'protrade_logo_yellow_black.png');
+  }
+  */
 }
 .headerLogo a {
   display: block;
-  width: 150px;
-  height: 52px;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-image: url("../img/protrade_logo_yellow_black.png");
+}
+.headerLogo a img {
+  display: block;
+  width: 100%;
+}
+.headerLogo .yellowLogo {
+  width: 148px;
+}
+.headerLogo .blackLogo {
+  display: none;
 }
 
 .headerRightContainer {
@@ -633,7 +652,7 @@ p {
 .pageFooter {
   margin: 20px 0 0;
   text-align: center;
-  font-size: .8em;
+  font-size: .9em;
 }
 .pageFooter a {
   color: #ccc;
@@ -652,19 +671,18 @@ p {
 
 .headerPageTitle {
   display: none;
-  font-size: 18px;
+  font-size: 1.6em;
   color: #000;
-  padding: 14px 0 0 54px;
   float: left;
+  padding: 0.5em 0 0 3.2em;
 }
 
 .pageHeader .menuBurgerButton {
   display: none;
-  font-size: 24px;
   position: absolute;
   z-index: 9;
-  width: 54px;
-  height: 54px;
+  width: 5em;
+  height: 4em;
   cursor: pointer;
   background: #ffe71b;
 }
@@ -673,10 +691,10 @@ p {
   display: block;
   content: "\0020";
   width: 60%;
-  height: 4px;
+  height: 0.3em;
   top: 50%;
   left: 20%;
-  margin-top: -2px;
+  margin-top: -0.15em;
   background-color: #000;
   border-radius: 1em;
   -webkit-touch-callout: none;
@@ -699,24 +717,24 @@ p {
   transition: transform 0.2s;
 }
 .pageHeader .menuBurgerButton span:before {
-  transform: translateY(8px);
-  -ms-transform: translateY(8px);
-  -webkit-transform: translateY(8px);
+  transform: translateY(0.8em);
+  -ms-transform: translateY(0.8em);
+  -webkit-transform: translateY(0.8em);
 }
 .pageHeader .menuBurgerButton span:after {
-  transform: translateY(-8px);
-  -ms-transform: translateY(-8px);
-  -webkit-transform: translateY(-8px);
+  transform: translateY(-0.8em);
+  -ms-transform: translateY(-0.8em);
+  -webkit-transform: translateY(-0.8em);
 }
 .pageHeader.showAdaptiveMenu .menuBurgerButton span:before {
-  transform: translateY(6px) translateX(-9px) rotate(45deg) scaleX(0.5);
-  -ms-transform: translateY(6px) translateX(-9px) rotate(45deg) scaleX(0.5);
-  -webkit-transform: translateY(6px) translateX(-9px) rotate(45deg) scaleX(0.5);
+  transform: translateY(0.6em) translateX(-1em) rotate(45deg) scaleX(0.6);
+  -ms-transform: translateY(0.6em) translateX(-1em) rotate(45deg) scaleX(0.6);
+  -webkit-transform: translateY(0.6em) translateX(-1em) rotate(45deg) scaleX(0.6);
 }
 .pageHeader.showAdaptiveMenu .menuBurgerButton span:after {
-  transform: translateY(-6px) translateX(-9px) rotate(-45deg) scaleX(0.5);
-  -ms-transform: translateY(-6px) translateX(-9px) rotate(-45deg) scaleX(0.5);
-  -webkit-transform: translateY(-6px) translateX(-9px) rotate(-45deg) scaleX(0.5);
+  transform: translateY(-0.6em) translateX(-1em) rotate(-45deg) scaleX(0.6);
+  -ms-transform: translateY(-0.6em) translateX(-1em) rotate(-45deg) scaleX(0.6);
+  -webkit-transform: translateY(-0.6em) translateX(-1em) rotate(-45deg) scaleX(0.6);
 }
 
 .pageContentContainer {
@@ -735,14 +753,30 @@ p {
 }
 
 .subTitleInline {
-  display: block;
+  display: inline-block;
   font-size: .8em;
-  padding-top: .2em;
   color: #ccc;
 }
 
 .pageContent {
   background: #3a3b3f;
+}
+
+.pdfDownload {
+  display: inline-block;
+  position: relative;
+  padding-left: 20px;
+}
+.pdfDownload:before {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -7px;
+  content: '';
+  width: 16px;
+  height: 16px;
+  background: url("../img/pdf.png") 0 0 no-repeat;
 }
 
 .pageHome .bx-wrapper .bx-pager {
@@ -830,9 +864,10 @@ p {
   background: #37383a;
   padding: 0 0 .3em;
 }
-.carItem .carTitle a {
+.carItem .carTitle > a,
+.carItem .carTitle > span {
   display: block;
-  padding: 10px 20px;
+  padding: .2em 20px;
 }
 .carItem .grid {
   background: #4f5053;
@@ -854,6 +889,7 @@ p {
   width: 32.3%;
   float: left;
   margin: 0 1% 1% 0;
+  padding-bottom: 1px;
 }
 .carItem .carPics li img {
   width: 100%;
@@ -873,6 +909,12 @@ p {
 .mainGallery + .contentInsider {
   padding-top: 10px;
 }
+.mainGallery .col-2-3 {
+  width: 75%;
+}
+.mainGallery .col-1-3 {
+  width: 25%;
+}
 
 .backToList {
   position: relative;
@@ -882,7 +924,7 @@ p {
   padding: 0 0 0 32px;
   margin: 0;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 1em;
   color: #ffe71b;
 }
 .backToList:before {
@@ -893,7 +935,7 @@ p {
   top: 8px;
   width: 28px;
   height: 24px;
-  background-image: url("../img/sprite.png");
+  background-image: url("http://new.protrade2000.de/assets/template/img/sprite.png");
   background-repeat: no-repeat;
   background-position: -86px -8px;
 }
@@ -1025,7 +1067,7 @@ p {
   display: inline-block;
   margin: 0;
   padding: 0 0 1px;
-  font-size: .9em;
+  font-size: 0.9em;
   vertical-align: top;
 }
 .carTechDetails dt {
@@ -1070,6 +1112,15 @@ p {
 }
 
 @media (max-width: 980px) {
+  [class*='col-'] {
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .grid-pad {
+    padding: 10px;
+  }
+
   body {
     font-size: 1.2em;
     background-image: none !important;
@@ -1081,17 +1132,16 @@ p {
 
   .pageTitle,
   .contentInsider {
-    padding: 10px;
+    padding: .6em 10px;
   }
 
   .navContainer {
     position: absolute;
     z-index: 8;
     top: 0;
-    width: 240px;
-    font-size: 1.1rem;
+    width: 20em;
     transition: left 0.2s ease-in 0.1s;
-    left: -240px;
+    left: -20em;
   }
 
   .showAdaptiveMenu .navContainer {
@@ -1099,7 +1149,8 @@ p {
   }
 
   .pageHeader {
-    min-height: 54px;
+    font-size: 1em;
+    min-height: 4em;
     background: #ffe71b;
   }
   .pageHeader .menuBurgerButton {
@@ -1107,7 +1158,8 @@ p {
   }
   .pageHeader .siteNav {
     border-radius: 0 0 10px 0;
-    padding: 60px 0 10px;
+    padding: 4em 0 .5em;
+    font-size: 1.2em;
   }
   .pageHeader .siteNav li {
     display: block;
@@ -1117,7 +1169,7 @@ p {
     float: none;
   }
   .pageHeader .siteNav li a {
-    padding: 1em .5em;
+    font-size: 1.6em;
   }
 
   .headeRightContainer {
@@ -1126,12 +1178,16 @@ p {
 
   .headerLogo {
     float: right;
-    padding: 8px 3px 0;
+    padding: 3px 5px 0;
   }
-  .headerLogo a {
-    width: 102px;
-    height: 37px;
-    background-position: -198px -60px;
+  .headerLogo .yellowLogo {
+    display: none;
+  }
+  .headerLogo .blackLogo {
+    display: block;
+    width: 8em;
+    height: 4em;
+    padding: .5em .3em 0 0;
   }
 
   .headerPageTitle {
@@ -1146,7 +1202,7 @@ p {
   }
 
   .backToList {
-    margin: 10px 5px;
+    margin: .5em 10px;
   }
 
   .gal_main {
@@ -1160,9 +1216,6 @@ p {
   .pageCar .contentWrapper .grid .carDesription,
   .pageCar .contentWrapper .grid .carTechDetails {
     padding: 10px 20px;
-    font-size: .7em;
-  }
-  .pageCar .contentWrapper .grid .carTechDetails dt {
     font-size: .9em;
   }
 
@@ -1175,6 +1228,13 @@ p {
   }
   .carItem .carPics li:nth-of-type(2n) {
     margin-right: 0;
+  }
+  .carItem .carTitle {
+    font-size: 1.4em;
+  }
+  .carItem .carTitle > a,
+  .carItem .carTitle > span {
+    padding: .1em 20px;
   }
 
   .pageReferences .referenceList > ul {
@@ -1201,7 +1261,12 @@ p {
     margin-bottom: 30px;
   }
 }
-@media (max-width: 768px) {
+/*
+.mobileDevice {
+	font-size: 1.8em;
+}
+*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-webkit-min-resolution: 192dpi) {
   [class*='col-'] {
     width: 100% !important;
     padding: 0 !important;
@@ -1210,11 +1275,128 @@ p {
   .grid-pad {
     padding: 10px;
   }
+
+  body {
+    font-size: 1.2em;
+    background-image: none !important;
+  }
+
+  .pageWrapper {
+    width: 100%;
+  }
+
+  .pageTitle,
+  .contentInsider {
+    padding: .6em 10px;
+  }
+
+  .navContainer {
+    position: absolute;
+    z-index: 8;
+    top: 0;
+    width: 20em;
+    transition: left 0.2s ease-in 0.1s;
+    left: -20em;
+  }
+
+  .showAdaptiveMenu .navContainer {
+    left: 0;
+  }
+
+  .pageHeader {
+    font-size: 1em;
+    min-height: 4em;
+    background: #ffe71b;
+  }
+  .pageHeader .menuBurgerButton {
+    display: block;
+  }
+  .pageHeader .siteNav {
+    border-radius: 0 0 10px 0;
+    padding: 4em 0 .5em;
+    font-size: 1.2em;
+  }
+  .pageHeader .siteNav li {
+    display: block;
+    padding: 0;
+  }
+  .pageHeader .siteNav li:last-child {
+    float: none;
+  }
+  .pageHeader .siteNav li a {
+    font-size: 1.6em;
+  }
+
+  .headeRightContainer {
+    display: none;
+  }
+
+  .headerLogo {
+    float: right;
+    padding: 3px 5px 0;
+  }
+  .headerLogo .yellowLogo {
+    display: none;
+  }
+  .headerLogo .blackLogo {
+    display: block;
+    width: 8em;
+    height: 4em;
+    padding: .5em .3em 0 0;
+  }
+
+  .headerPageTitle {
+    display: block;
+  }
+
+  .headerLang {
+    top: 12px;
+  }
+  .headerLang a {
+    color: #000 !important;
+  }
+
+  .backToList {
+    margin: .5em 10px;
+  }
+
+  .gal_main {
+    padding-bottom: 20px;
+  }
+
+  body {
+    font-size: 1.2em;
+  }
+
+  .pageHeader {
+    font-size: .6em;
+  }
 }
-@media (min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  [class*='col-'] {
-    width: 100% !important;
-    padding: 0 !important;
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
+  body {
+    font-size: 1em;
+  }
+
+  .pageHeader {
+    font-size: .6em;
+  }
+}
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  body {
+    font-size: 1em;
+  }
+
+  .pageHeader {
+    font-size: .6em;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  body {
+    font-size: 1em;
+  }
+
+  .pageHeader {
+    font-size: .6em;
   }
 }
 /**

@@ -1,7 +1,14 @@
-@media ($smallScreen) {
+@mixin mobileLayout() {
 
-	$adaptiveMenuWidth: 240px;
-	
+	$adaptiveMenuWidth: 20em;
+
+	// grids
+	[class*='col-'] {
+		width: 100% !important;
+		padding: 0 !important;
+	}
+	.grid-pad { padding: 10px; }
+
 	body { 
 		font-size: 1.2em; 
 		background-image: none !important;
@@ -11,7 +18,7 @@
 	.pageWrapper { width: 100%; }
 
 	.pageTitle,
-	.contentInsider { padding: 10px; }
+	.contentInsider { padding: .6em 10px; }
 	
 	// adaptive menu
 	.navContainer {
@@ -19,9 +26,8 @@
 		z-index: 8;
 		top: 0; 
 		width: $adaptiveMenuWidth;
-		font-size: 1.1rem;
 		@include single-transition(left, .2s, ease-in, .1s);
-		left: -$adaptiveMenuWidth;
+		left: -$adaptiveMenuWidth; 
 	}
 	.showAdaptiveMenu {
 		.navContainer {	
@@ -31,29 +37,36 @@
 
 	// header
 	.pageHeader {
-		min-height: 54px;
+		font-size: 1em;
+		min-height: 4em;
 		background: $yellowColor;
 		.menuBurgerButton { display: block; } 
 		.siteNav {
 			border-radius: 0 0 10px 0;
-			padding: 60px 0 10px;
+			padding: 4em 0 .5em;
+			font-size: 1.2em;
 			li {
 				display: block;
 				padding: 0;
 				&:last-child { float: none; }
-				a { padding: 1em .5em; }
+				a { 
+					font-size: 1.6em;
+					// padding: 1em .7em; 
+				}
 			}
 		}
 	}
 	.headeRightContainer { display: none; }
 	.headerLogo	{ 
 		float: right; 
-		padding: 8px 3px 0;
-		a { 
-			width: 102px;
-			height: 37px;
-			background-position: -198px -60px;
-			}
+		padding: 3px 5px 0;
+		.yellowLogo { display: none; }
+		.blackLogo { 
+			display: block;
+			width: 8em;
+			height: 4em;
+			padding: .5em .3em 0 0;
+		}
 	}
 	.headerPageTitle { display: block; }
 	.headerLang { 
@@ -62,10 +75,19 @@
 	}
 
 
-	.backToList { margin: 10px 5px; }
+	.backToList { margin: .5em 10px; }
 
 	.gal_main { padding-bottom: 20px; }
 
+}
+
+
+
+
+@media ($smallScreen) {
+
+	
+	@include mobileLayout();
 	
 
 	// page adjustments
@@ -79,9 +101,9 @@
 				.carDesription,
 				.carTechDetails { 
 					padding: 10px 20px; 
-					font-size: .7em;
+					font-size: .9em;
 				}
-				.carTechDetails dt { font-size: .9em; }
+				// .carTechDetails dt { font-size: .9em; }
 			}
 		}
 	}
@@ -96,7 +118,15 @@
 				margin-right: 2%;
 			}
 		}
+		.carTitle { 
+			font-size: 1.4em;
+			> a,
+			> span { 
+				padding: .1em 20px; 
+			}
+		}
 	}
+
 
 
 	// page REFERENCE
@@ -135,28 +165,64 @@
 }
 
 
-// 480px
-@media #{$mediaScreenTablet}  {
+// 
+// @media #{$mediaScreenTablet}  {
+@media #{$mediaScreenPhablet}  {
 	
-	// grids
-	[class*='col-'] {
-		width: 100% !important;
-		padding: 0 !important;
-	}
-	.grid-pad { padding: 10px; }
 }
 
-// hi-res devices
-@media 
-	(min-resolution: 192dpi), 
-	(-webkit-min-device-pixel-ratio: 2), 
-	(min--moz-device-pixel-ratio: 2), 
-	(-o-min-device-pixel-ratio: 2/1), 
-	(min-device-pixel-ratio: 2), 
-	(min-resolution: 2dppx) {
 
-  	[class*='col-'] {
-		width: 100% !important;
-		padding: 0 !important;
-	}
+// mobile devices detected by js
+/*
+.mobileDevice {
+	font-size: 1.8em;
+}
+*/
+
+
+
+@mixin hiresDevMQ() {
+	body { font-size: 1.2em; }
+	.pageHeader { font-size: .6em; }
+}
+
+// hi-res devices 
+@media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+        only screen and (-webkit-min-resolution: 192dpi) {
+    @include mobileLayout();
+    @include hiresDevMQ();
+}
+
+
+// ipad 3-4 (retina)
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 2) { 
+	// body { font-size: 1.2em; }
+	// .pageHeader { font-size: .6em; }
+}
+
+// iphone 6 plus
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) {
+	body { font-size: 1em; }
+	.pageHeader { font-size: .6em; }
+}
+
+// iphone 6
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) { 
+	body { font-size: 1em; }
+	.pageHeader { font-size: .6em; }
+}
+
+//iPhone 5 & 5S
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) { 
+	body { font-size: 1em; }
+	.pageHeader { font-size: .6em; }
 }
