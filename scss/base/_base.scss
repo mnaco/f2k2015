@@ -310,6 +310,7 @@ p { margin-top: 0; }
 	margin: 0;
 	padding: 15px 20px; 
 	color: #fff;
+	span { padding-right: 0.6em; }
 }
 .subTitleInline {
 	display: inline-block;
@@ -335,7 +336,7 @@ p { margin-top: 0; }
 		content: '';
 		width: 16px;
 		height: 16px;
-		background: url('../img/pdf.png') 0 0 no-repeat;
+		background: url($imgUrl+'pdf.png') 0 0 no-repeat;
 	}
 	
 }
@@ -375,19 +376,20 @@ p { margin-top: 0; }
 	// labels
 	.statusLabel { 
 		$labelCorner: 3px;
-		$colorSold: #900;
-		$colorSoon: #ff5a00;
+		$colorSold: #00cc00;		// green
+		$colorSoon: #ff5a00;	// orange
+		$colorSpecial: #900;	// red
 		// display: none; 
 		position: absolute;
 		display: block;
 		top: 7px;
 		right: -#{$labelCorner};
 		padding: 0 .6em 0 .5em;
-		background-color: #000;
+		background-color: #000; // $yellowColor;
 		color: #fff;
 		font-size: 14px;
 		height: 22px;
-		line-height: 20px;
+		line-height: 21px;
 		border-radius: 5px 0 0 5px;
 		&:before,
 		&:after {
@@ -408,15 +410,23 @@ p { margin-top: 0; }
 			border-width: $labelCorner $labelCorner 0 0;
 			border-color: #000 transparent transparent transparent;
 		}
-		&.sold {
-			background-color: $colorSold;
-			&:before { border-color: transparent transparent transparent $colorSold; } 
-			&:after { border-color: $colorSold transparent transparent transparent; }
+		&.SPECIAL {
+			background-color: $colorSpecial;
+			color: #fff;
+			&:before { border-color: transparent transparent transparent $colorSpecial; } 
+			&:after { border-color: $colorSpecial transparent transparent transparent; }
 		}
-		&.soon {
+		&.SOON {
 			background-color: $colorSoon;
+			color: #fff;
 			&:before { border-color: transparent transparent transparent $colorSoon; } 
 			&:after { border-color: $colorSoon transparent transparent transparent; }
+		}
+		&.SOLD {
+			background-color: $colorSold;
+			color: #fff;
+			&:before { border-color: transparent transparent transparent $colorSold; } 
+			&:after { border-color: $colorSold transparent transparent transparent; }
 		}
 	}
 
@@ -424,7 +434,7 @@ p { margin-top: 0; }
 		font-size: 1.6em;
 		margin: 0;
 		background: #37383a;
-		padding: 0 0 .3em;
+		padding: 0 2em .3em 0;
 		> a,
 		> span {	
 			display: block;
@@ -676,8 +686,8 @@ p { margin-top: 0; }
 	}
 	.aboutText {
 		padding: 20px;
-		min-height: 200px;
-		padding-right: 260px;
+		// min-height: 200px;
+		// padding-right: 260px;
 		background-image: url('../../images/about_page_bcgr.png');
 		background-repeat: no-repeat;
 		background-position: right bottom;

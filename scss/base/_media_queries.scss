@@ -1,3 +1,6 @@
+/*
+ * mobileLayout()
+ */
 @mixin mobileLayout() {
 
 	$adaptiveMenuWidth: 20em;
@@ -37,7 +40,7 @@
 
 	// header
 	.pageHeader {
-		font-size: 1em;
+		font-size: 0.7em;
 		min-height: 4em;
 		background: $yellowColor;
 		.menuBurgerButton { display: block; } 
@@ -50,7 +53,7 @@
 				padding: 0;
 				&:last-child { float: none; }
 				a { 
-					font-size: 1.6em;
+					font-size: 1.4em;
 					// padding: 1em .7em; 
 				}
 			}
@@ -63,9 +66,11 @@
 		.yellowLogo { display: none; }
 		.blackLogo { 
 			display: block;
-			width: 8em;
 			height: 4em;
-			padding: .5em .3em 0 0;
+			// width: 8em;
+			// padding: .5em .3em 0 0;
+			width: 10em;
+			padding: .2em .3em 0 0;
 		}
 	}
 	.headerPageTitle { display: block; }
@@ -78,17 +83,25 @@
 	.backToList { margin: .5em 10px; }
 
 	.gal_main { padding-bottom: 20px; }
-
+ 
+	.carItem .statusLabel {
+		&:before,
+		&:after {
+			display: none;
+		}
+		right: 0px;
+		height: 1.6em;
+		font-size: 0.8em;
+		line-height: 1.5em;
+	}
 }
 
 
 
 
 @media ($smallScreen) {
-
 	
 	@include mobileLayout();
-	
 
 	// page adjustments
 
@@ -186,13 +199,15 @@
 	.pageHeader { font-size: .6em; }
 }
 
-// hi-res devices 
+/*
+ * hi-res devices 
+ *
 @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
         only screen and (-webkit-min-resolution: 192dpi) {
     @include mobileLayout();
     @include hiresDevMQ();
 }
-
+*/
 
 // ipad 3-4 (retina)
 @media only screen 
@@ -226,3 +241,4 @@ and (max-device-width : 568px) {
 	body { font-size: 1em; }
 	.pageHeader { font-size: .6em; }
 }
+

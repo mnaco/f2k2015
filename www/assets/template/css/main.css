@@ -751,6 +751,9 @@ p {
   padding: 15px 20px;
   color: #fff;
 }
+.pageTitle span {
+  padding-right: 0.6em;
+}
 
 .subTitleInline {
   display: inline-block;
@@ -776,7 +779,7 @@ p {
   content: '';
   width: 16px;
   height: 16px;
-  background: url("../img/pdf.png") 0 0 no-repeat;
+  background: url("http://new.protrade2000.de/assets/template/img/pdf.png") 0 0 no-repeat;
 }
 
 .pageHome .bx-wrapper .bx-pager {
@@ -815,7 +818,7 @@ p {
   color: #fff;
   font-size: 14px;
   height: 22px;
-  line-height: 20px;
+  line-height: 21px;
   border-radius: 5px 0 0 5px;
 }
 .carItem .statusLabel:before, .carItem .statusLabel:after {
@@ -840,29 +843,41 @@ p {
   border-width: 3px 3px 0 0;
   border-color: #000 transparent transparent transparent;
 }
-.carItem .statusLabel.sold {
+.carItem .statusLabel.SPECIAL {
   background-color: #900;
+  color: #fff;
 }
-.carItem .statusLabel.sold:before {
+.carItem .statusLabel.SPECIAL:before {
   border-color: transparent transparent transparent #900;
 }
-.carItem .statusLabel.sold:after {
+.carItem .statusLabel.SPECIAL:after {
   border-color: #900 transparent transparent transparent;
 }
-.carItem .statusLabel.soon {
+.carItem .statusLabel.SOON {
   background-color: #ff5a00;
+  color: #fff;
 }
-.carItem .statusLabel.soon:before {
+.carItem .statusLabel.SOON:before {
   border-color: transparent transparent transparent #ff5a00;
 }
-.carItem .statusLabel.soon:after {
+.carItem .statusLabel.SOON:after {
   border-color: #ff5a00 transparent transparent transparent;
+}
+.carItem .statusLabel.SOLD {
+  background-color: #00cc00;
+  color: #fff;
+}
+.carItem .statusLabel.SOLD:before {
+  border-color: transparent transparent transparent #00cc00;
+}
+.carItem .statusLabel.SOLD:after {
+  border-color: #00cc00 transparent transparent transparent;
 }
 .carItem .carTitle {
   font-size: 1.6em;
   margin: 0;
   background: #37383a;
-  padding: 0 0 .3em;
+  padding: 0 2em .3em 0;
 }
 .carItem .carTitle > a,
 .carItem .carTitle > span {
@@ -1100,8 +1115,6 @@ p {
 }
 .pageAbout .aboutText {
   padding: 20px;
-  min-height: 200px;
-  padding-right: 260px;
   background-image: url("../../images/about_page_bcgr.png");
   background-repeat: no-repeat;
   background-position: right bottom;
@@ -1111,6 +1124,9 @@ p {
   margin: 0 0 3px;
 }
 
+/*
+ * mobileLayout()
+ */
 @media (max-width: 980px) {
   [class*='col-'] {
     width: 100% !important;
@@ -1149,7 +1165,7 @@ p {
   }
 
   .pageHeader {
-    font-size: 1em;
+    font-size: 0.7em;
     min-height: 4em;
     background: #ffe71b;
   }
@@ -1169,7 +1185,7 @@ p {
     float: none;
   }
   .pageHeader .siteNav li a {
-    font-size: 1.6em;
+    font-size: 1.4em;
   }
 
   .headeRightContainer {
@@ -1185,9 +1201,9 @@ p {
   }
   .headerLogo .blackLogo {
     display: block;
-    width: 8em;
     height: 4em;
-    padding: .5em .3em 0 0;
+    width: 10em;
+    padding: .2em .3em 0 0;
   }
 
   .headerPageTitle {
@@ -1207,6 +1223,16 @@ p {
 
   .gal_main {
     padding-bottom: 20px;
+  }
+
+  .carItem .statusLabel {
+    right: 0px;
+    height: 1.6em;
+    font-size: 0.8em;
+    line-height: 1.5em;
+  }
+  .carItem .statusLabel:before, .carItem .statusLabel:after {
+    display: none;
   }
 
   .pageCar .contentWrapper .grid {
@@ -1266,112 +1292,15 @@ p {
 	font-size: 1.8em;
 }
 */
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-webkit-min-resolution: 192dpi) {
-  [class*='col-'] {
-    width: 100% !important;
-    padding: 0 !important;
-  }
-
-  .grid-pad {
-    padding: 10px;
-  }
-
-  body {
-    font-size: 1.2em;
-    background-image: none !important;
-  }
-
-  .pageWrapper {
-    width: 100%;
-  }
-
-  .pageTitle,
-  .contentInsider {
-    padding: .6em 10px;
-  }
-
-  .navContainer {
-    position: absolute;
-    z-index: 8;
-    top: 0;
-    width: 20em;
-    transition: left 0.2s ease-in 0.1s;
-    left: -20em;
-  }
-
-  .showAdaptiveMenu .navContainer {
-    left: 0;
-  }
-
-  .pageHeader {
-    font-size: 1em;
-    min-height: 4em;
-    background: #ffe71b;
-  }
-  .pageHeader .menuBurgerButton {
-    display: block;
-  }
-  .pageHeader .siteNav {
-    border-radius: 0 0 10px 0;
-    padding: 4em 0 .5em;
-    font-size: 1.2em;
-  }
-  .pageHeader .siteNav li {
-    display: block;
-    padding: 0;
-  }
-  .pageHeader .siteNav li:last-child {
-    float: none;
-  }
-  .pageHeader .siteNav li a {
-    font-size: 1.6em;
-  }
-
-  .headeRightContainer {
-    display: none;
-  }
-
-  .headerLogo {
-    float: right;
-    padding: 3px 5px 0;
-  }
-  .headerLogo .yellowLogo {
-    display: none;
-  }
-  .headerLogo .blackLogo {
-    display: block;
-    width: 8em;
-    height: 4em;
-    padding: .5em .3em 0 0;
-  }
-
-  .headerPageTitle {
-    display: block;
-  }
-
-  .headerLang {
-    top: 12px;
-  }
-  .headerLang a {
-    color: #000 !important;
-  }
-
-  .backToList {
-    margin: .5em 10px;
-  }
-
-  .gal_main {
-    padding-bottom: 20px;
-  }
-
-  body {
-    font-size: 1.2em;
-  }
-
-  .pageHeader {
-    font-size: .6em;
-  }
+/*
+ * hi-res devices 
+ *
+@media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+        only screen and (-webkit-min-resolution: 192dpi) {
+    @include mobileLayout();
+    @include hiresDevMQ();
 }
+*/
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
   body {
     font-size: 1em;
